@@ -15,8 +15,8 @@
         | phone   |
         | <phone> |
       Then I would see the detail
-        | total   | precio   |
-        | <total> | <precio> |
+        | total   | price   |
+        | <total> | <price> |
       Examples:
         | phone          | price | total |
         | Phone XL       | 799   | 814   |

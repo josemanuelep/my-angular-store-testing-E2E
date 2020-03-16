@@ -13,4 +13,5 @@ import org.junit.runner.RunWith;
         glue = {"co.com.choucair.certification.angular_store.stepsdefinitions", "co.com.choucair.certification.angular_store.util"},
         snippets = SnippetType.CAMELCASE)
 public class ProductDetail {
+
 }
