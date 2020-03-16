@@ -1,4 +1,4 @@
-package co.com.choucair.certification.github.runners;
+package co.com.choucair.certification.angular_store.runners;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features/upload_file.feature",
-        tags = "@tag1",
-        glue = {"co.com.choucair.certification.github.stepsdefinitions", "co.com.choucair.certification.github.util"},
+        tags = "@regresion",
+//      glue = {"co.com.choucair.certification.angular_store.stepsdefinitions", "co.com.choucair.certification.angular_store.util"},
         snippets = SnippetType.CAMELCASE)
 public class UploadFileInBranch {
 }

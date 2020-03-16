@@ -1,6 +1,6 @@
-package co.com.choucair.certification.github.tasks;
+package co.com.choucair.certification.angular_store.tasks;
 
-import co.com.choucair.certification.github.userinterface.HomePage;
+import co.com.choucair.certification.angular_store.userinterface.HomePage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

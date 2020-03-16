@@ -1,4 +1,4 @@
-package co.com.choucair.certification.github.util;
+package co.com.choucair.certification.angular_store.util;
 
 import cucumber.api.java.Before;
 import net.serenitybdd.screenplay.actors.OnStage;

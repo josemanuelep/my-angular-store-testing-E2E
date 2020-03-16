@@ -1,4 +1,4 @@
-package co.com.choucair.certification.github.util;
+package co.com.choucair.certification.angular_store.util;
 
 public class Constants {
     public static final String URL = "https://angular-vkwfzw.stackblitz.io";
