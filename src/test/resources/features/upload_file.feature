@@ -9,10 +9,19 @@
     that assurance of quality of my first frontend
     and basic API project in Angular
 
-    Scenario: Detail of product
+    Scenario Outline: Detail of product
       Given I am out shopping online
-      When I open details of "Phone XL" I
-      Then I don't ne
+      When I open details of phone
+        | phone   |
+        | <phone> |
+      Then I would see the detail
+        | total   | precio   |
+        | <total> | <precio> |
+      Examples:
+        | phone          | price | total |
+        | Phone XL       | 799   | 814   |
+        | Phone Mini     | 699   | 613   |
+        | Phone Standard | 299   | 308,5 |
 
 
 

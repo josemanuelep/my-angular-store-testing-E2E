@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/test/resources/features/upload_file.feature",
         tags = "@regresion",
-//      glue = {"co.com.choucair.certification.angular_store.stepsdefinitions", "co.com.choucair.certification.angular_store.util"},
+        glue = {"co.com.choucair.certification.angular_store.stepsdefinitions", "co.com.choucair.certification.angular_store.util"},
         snippets = SnippetType.CAMELCASE)
-public class UploadFileInBranch {
+public class ProductDetail {
 }
