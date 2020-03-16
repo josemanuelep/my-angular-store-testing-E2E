@@ -21,7 +21,7 @@
         | phone          | price | total |
         | Phone XL       | 799   | 814   |
         | Phone Mini     | 699   | 613   |
-        | Phone Standard | 299   | 308,5 |
+        | Phone Standard | 299   | 308   |
 
 
 
