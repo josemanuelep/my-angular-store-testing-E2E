@@ -12,16 +12,16 @@
     Scenario Outline: Detail of product
       Given I am out shopping online
       When I open details of phone
-        | name   |
-        | <name> |
+        | id   | name   |
+        | <id> | <name> |
       Then I would see the detail
         | name   | description   | price   | iva   | total   |
         | <name> | <description> | <price> | <iva> | <total> |
       Examples:
-        | name           | description                                | price | iva | total |
-        | Phone XL       | A large phone with one of the best screens | 799   | 15  | 814   |
-        | Phone Mini     | A great phone with one of the best cameras | 699   | 12  | 613   |
-        | Phone Standard |                                            | 299   | 9   | 308   |
+        | id | name           | description                                | price | iva | total |
+        | 0  | Phone XL       | A large phone with one of the best screens | 799   | 15  | 814   |
+        | 1  | Phone Mini     | A great phone with one of the best cameras | 699   | 12  | 613   |
+        | 2  | Phone Standard |                                            | 299   | 9   | 308   |
 
 
 
