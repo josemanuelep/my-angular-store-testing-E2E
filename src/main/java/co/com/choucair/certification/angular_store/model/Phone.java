@@ -1,5 +1,7 @@
 package co.com.choucair.certification.angular_store.model;
 
+import cucumber.api.java.eo.Do;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -9,8 +11,8 @@ public class Phone {
     private String price;
     private String iva;
     private String total;
-    Locale locale = new Locale("en", "US");
-    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
+    private static Locale locale = new Locale("en", "US");
+    private static NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
 
     public String getName() {
         return name;
@@ -32,23 +34,23 @@ public class Phone {
         return price;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setPrice(Double price) {
+        this.price = currencyFormatter.format(price);
     }
 
     public String getIva() {
         return iva;
     }
 
-    public void setIva(String iva) {
-        this.iva = iva;
+    public void setIva(Double iva) {
+        this.iva = currencyFormatter.format(iva);
     }
 
     public String getTotal() {
         return total;
     }
 
-    public void setTotal(String total) {
-        this.total = total;
+    public void setTotal(Double total) {
+        this.total = currencyFormatter.format(total);
     }
 }
