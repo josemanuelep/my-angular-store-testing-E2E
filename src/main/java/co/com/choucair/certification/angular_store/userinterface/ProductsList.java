@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class ProductsList {
 
-    public static Target getTargetByid(String id){
-        return Target.the("").located(By.id(id));
+    public static Target getTargetByid(String id) {
+        return Target.the(id).located(By.id(id));
     }
 }

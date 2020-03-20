@@ -1,6 +1,7 @@
 package co.com.choucair.certification.angular_store.stepsdefinitions;
 
 import co.com.choucair.certification.angular_store.model.Phone;
+import co.com.choucair.certification.angular_store.tasks.OpenDetail;
 import co.com.choucair.certification.angular_store.tasks.OpenThe;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,7 +21,7 @@ public class ProductDetailRunner {
 
     @When("^I open details of phone$")
     public void iOpenDetailsOfPhone(List<Phone> phones) {
-
+        theActorCalled(ACTOR).attemptsTo(OpenDetail.of(phones));
     }
 
     @Then("^I would see the detail$")

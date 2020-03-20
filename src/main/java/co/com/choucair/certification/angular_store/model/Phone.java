@@ -6,7 +6,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 public class Phone {
-    private Integer id;
+    private String id;
     private String name;
     private String description;
     private String price;
@@ -15,11 +15,11 @@ public class Phone {
     private static Locale locale = new Locale("en", "US");
     private static NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -23,8 +23,8 @@ public class OpenDetail implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        Integer index = phones.get(INDEX_0).getId();
-        actor.attemptsTo(Click.on(ProductsList.getTargetByid(index.toString())));
+        String index = phones.get(INDEX_0).getId();
+        actor.attemptsTo(Click.on(ProductsList.getTargetByid(index)));
 
     }
 }
