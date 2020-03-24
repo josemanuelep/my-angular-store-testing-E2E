@@ -18,10 +18,10 @@
         | name   | description   | price   | iva   | total   |
         | <name> | <description> | <price> | <iva> | <total> |
       Examples:
-        | id        | name           | description                                | price | iva | total |
-        | product-0 | Phone XL       | A large phone with one of the best screens | 799   | 15  | 814   |
-        | product-1 | Phone Mini     | A great phone with one of the best cameras | 699   | 12  | 613   |
-        | product-2 | Phone Standard |                                            | 299   | 9   | 308   |
+        | id        | name     | description                                | price | iva  | total |
+        | product-0 | Phone XL | A large phone with one of the best screens | 79900 | 1500 | 81400 |
+#        | product-1 | Phone Mini     | A great phone with one of the best cameras | 699   | 12  | 613   |
+#        | product-2 | Phone Standard |                                            | 299   | 9   | 308   |
 
 
 

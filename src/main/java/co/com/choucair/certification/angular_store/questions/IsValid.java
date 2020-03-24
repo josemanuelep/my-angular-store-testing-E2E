@@ -1,24 +1,43 @@
 package co.com.choucair.certification.angular_store.questions;
 
+import co.com.choucair.certification.angular_store.model.Phone;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class IsValid implements Question<Boolean> {
-    private String toValide;
-    private Target target;
+import java.util.List;
 
-    public IsValid(String toValide, Target target) {
-        this.toValide = toValide;
-        this.target = target;
+import static co.com.choucair.certification.angular_store.userinterface.ProductDetail.*;
+import static co.com.choucair.certification.angular_store.util.Constants.INDEX_0;
+
+public class IsValid implements Question<Boolean> {
+    private List<Phone> phones;
+
+    public IsValid(List<Phone> phones) {
+        this.phones = phones;
     }
 
-    public static IsValid the(String toValide, Target target) {
-        return new IsValid(toValide, target);
+    public static IsValid the(List<Phone> phones) {
+        return new IsValid(phones);
     }
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return toValide.equals(target.resolveFor(actor).getText());
+
+        String name = PRODUCT_NAME.resolveFor(actor).getText();
+        String description = PRODUCT_DESC.resolveFor(actor).getText();
+        String price =PRODUCT_PRICE.resolveFor(actor).getText().replaceAll("\\D+","");
+        String iva = PRODUCT_IVA.resolveFor(actor).getText().replaceAll("\\D+","");
+        String total = PRODUCT_TOTAL.resolveFor(actor).getText().replaceAll("\\D+","");
+        Phone phoneInthePage = new Phone(name,description,price,iva,total);
+        Phone phoneToCompare = this.phones.get(INDEX_0);
+        System.out.println("Phone of page "+phoneInthePage);
+        System.out.println("Phone of feature "+phoneToCompare.toString());
+//        System.out.println("nombre "+name);
+//        System.out.println("des "+description);
+        System.out.println("price " + price);
+        System.out.println("iva " + iva);
+        System.out.println("iva " + total);
+        return true;
     }
 }
