@@ -4,6 +4,7 @@ import co.com.choucair.certification.angular_store.model.Phone;
 import co.com.choucair.certification.angular_store.questions.IsValid;
 import co.com.choucair.certification.angular_store.tasks.OpenDetail;
 import co.com.choucair.certification.angular_store.tasks.OpenThe;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -23,7 +24,8 @@ public class ProductDetailSteps {
 
 
     @When("^I open details of phone$")
-    public void iOpenDetailsOfPhone(List<Phone> phones) {
+    public void iOpenDetailsOfPhone(DataTable phonesd) {
+        List<Phone> phones= phonesd.asList(Phone.class);
         theActorCalled(ACTOR).attemptsTo(OpenDetail.of(phones));
     }
 
