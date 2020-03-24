@@ -31,6 +31,8 @@ public class IsValid implements Question<Boolean> {
         String total = PRODUCT_TOTAL.resolveFor(actor).getText().replaceAll("\\D+","");
         Phone phoneInthePage = new Phone(name,description,price,iva,total);
         Phone phoneToCompare = this.phones.get(INDEX_0);
+        System.out.println("Phone of page "+phoneInthePage);
+        System.out.println("Phone of feature "+phoneToCompare.toString());
 
         return phoneInthePage.equals(phoneToCompare);
     }
